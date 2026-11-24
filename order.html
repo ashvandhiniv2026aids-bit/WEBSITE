@@ -1,0 +1,164 @@
+<!-- order.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>FoodieHub | Order Food</title>
+
+<style>
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #fff8f0;
+    color: #3d3028;
+}
+header {
+    background: #c94c24;
+    color: white;
+    padding: 22px 8%;
+}
+nav {
+    margin-top: 15px;
+}
+nav a {
+    color: white;
+    text-decoration: none;
+    margin-right: 20px;
+    font-weight: bold;
+}
+main {
+    padding: 30px 8%;
+}
+h2 {
+    color: #c94c24;
+}
+.form-box {
+    max-width: 600px;
+    margin: auto;
+    background: white;
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px #ead9cc;
+}
+label {
+    display: block;
+    margin-top: 15px;
+    font-weight: bold;
+}
+input, select, textarea {
+    width: 100%;
+    padding: 10px;
+    margin-top: 6px;
+    border: 1px solid #e4bca8;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+input[type="radio"], input[type="checkbox"] {
+    width: auto;
+}
+.option label {
+    display: inline;
+    font-weight: normal;
+}
+button {
+    background: #c94c24;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 5px;
+    margin-top: 20px;
+    margin-right: 8px;
+    cursor: pointer;
+}
+button:hover {
+    background: #a53818;
+}
+footer {
+    background: #48271c;
+    color: white;
+    text-align: center;
+    padding: 18px;
+    margin-top: 30px;
+}
+</style>
+</head>
+
+<body>
+
+<header>
+    <h1>Order Your Food</h1>
+    <p>Your Favourite Food Is Just a Click Away!</p>
+
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="menu.html">Menu</a>
+        <a href="gallery.html">Gallery</a>
+        <a href="order.html">Order Now</a>
+    </nav>
+</header>
+
+<main>
+    <div class="form-box">
+        <h2>Food Order Form</h2>
+        <p>Fill in your details and select your favourite food.</p>
+
+        <form action="#" method="get">
+
+            <label for="name">Full Name</label>
+            <input type="text" id="name" name="name" placeholder="Enter your name" required>
+
+            <label for="email">Email Address</label>
+            <input type="email" id="email" name="email" placeholder="Enter your email" required>
+
+            <label for="phone">Phone Number</label>
+            <input type="tel" id="phone" name="phone" placeholder="Enter your phone number">
+
+            <label for="food">Choose Food Item</label>
+            <select id="food" name="food" required>
+                <option value="">Select your food</option>
+                <option value="burger">Veg Burger</option>
+                <option value="pizza">Veg Pizza</option>
+                <option value="fries">French Fries</option>
+                <option value="cake">Chocolate Cake</option>
+                <option value="icecream">Ice Cream</option>
+            </select>
+
+            <label for="quantity">Quantity</label>
+            <input type="number" id="quantity" name="quantity" min="1" max="20" value="1" required>
+
+            <label>Order Type</label>
+
+            <div class="option">
+                <input type="radio" id="delivery" name="orderType" value="delivery" required>
+                <label for="delivery">Home Delivery</label>
+            </div>
+
+            <div class="option">
+                <input type="radio" id="pickup" name="orderType" value="pickup">
+                <label for="pickup">Takeaway</label>
+            </div>
+
+            <label for="address">Delivery Address</label>
+            <textarea id="address" name="address" rows="3" placeholder="Enter your address"></textarea>
+
+            <div class="option">
+                <input type="checkbox" id="confirm" name="confirm" value="yes" required>
+                <label for="confirm">I confirm that my details are correct.</label>
+            </div>
+
+            <button type="submit">Submit Order</button>
+            <button type="reset">Clear Form</button>
+
+        </form>
+
+        <p><strong>Note:</strong> This is a sample form. It does not process or store actual food orders.</p>
+    </div>
+</main>
+
+<footer>
+    <p>&copy; 2026 FoodieHub | Thank You for Visiting!</p>
+</footer>
+
+</body>
+</html>
